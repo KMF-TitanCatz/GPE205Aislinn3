@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
    
     public static GameManager instance;
+    public Transform playerSpawnTransform;
 
     // Awake is called when the object is first created - before even Start can run!
     private void Awake()
@@ -27,7 +28,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //TEMP CODE spawns player
+        SpawnPlayer();
     }
 
     // Update is called once per frame
@@ -35,4 +37,24 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    public void SpawnPlayer()
+    {
+        //Spawn the player controller (0,0,0) no rotation
+        GameObject newPlayerObj = Instantiate(playerControllerPrefab, Vector3.zero, Quaternion.identity) as GameObject;
+
+        //Spawn the pawn and connect it to the controller
+        GameObject newpawnObj = Instantiate(tankPawnPrefab, playerSpawnTransform.position, playerSpawnTransform.rotation) as GameObject;
+
+        //Get the player controller and pawn components
+        Controller newController = newPlayerObj.GetComponent<Controller>();
+        Pawn newPawn = newpawnObj.GetComponent<Pawn>();
+
+        //Hook everyting up
+        newController.pawn = newPawn;
+    }
+
+    //Prefabs
+    public GameObject playerControllerPrefab;
+    public GameObject tankPawnPrefab;
 }
