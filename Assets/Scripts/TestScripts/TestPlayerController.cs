@@ -13,7 +13,7 @@ public class TestPlayerController : TestController
     // Start is called before the first frame update
     void Start()
     {
-        //base.Start();
+
     }
 
     // Update is called once per frame
@@ -22,29 +22,28 @@ public class TestPlayerController : TestController
         //Process keyboard inputs
         ProcessInputs();
 
-        //base.Update();
     }
 
     public override void ProcessInputs()
     {
         if (Input.GetKey(moveForwardKey))
             {
-            TestPawn.MoveForward();
+            testPawn.MoveForward();
             }
 
         if (Input.GetKey(moveBackwardsKey))
             {
-            TestPawn.MoveBackward();
+            testPawn.MoveBackward();
             }
 
         if (Input.GetKey(rotateClockwiseKey))
             {
-            TestPawn.RotateClockwise();
+            testPawn.RotateClockwise();
             }
 
         if (Input.GetKey(rotateCounterClockwiseKey))
             {
-            TestPawn.RotateCounterClockwise();
+            testPawn.RotateCounterClockwise();
             }
     }
 }

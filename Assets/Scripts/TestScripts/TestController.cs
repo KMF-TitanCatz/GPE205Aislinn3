@@ -18,5 +18,9 @@ public abstract class TestController : MonoBehaviour
     {       
     }
 
+    public virtual void ProcessInputs()
+    {
+    }
+
 }
 
