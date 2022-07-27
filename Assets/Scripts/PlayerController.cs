@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestPlayerController : TestController
+public class PlayerController : Controller
 {
 
     public KeyCode moveForwardKey;
@@ -11,39 +11,42 @@ public class TestPlayerController : TestController
     public KeyCode rotateCounterClockwiseKey;
 
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
-
+        //run start function from parent class
+        base.Start();
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
         //Process keyboard inputs
         ProcessInputs();
 
+        //run update function from parent class
+        base.Update();
     }
 
     public override void ProcessInputs()
     {
         if (Input.GetKey(moveForwardKey))
             {
-            testPawn.MoveForward();
+            pawn.MoveForward();
             }
 
         if (Input.GetKey(moveBackwardsKey))
             {
-            testPawn.MoveBackward();
+            pawn.MoveBackward();
             }
 
         if (Input.GetKey(rotateClockwiseKey))
             {
-            testPawn.RotateClockwise();
+            pawn.RotateClockwise();
             }
 
         if (Input.GetKey(rotateCounterClockwiseKey))
             {
-            testPawn.RotateCounterClockwise();
+            pawn.RotateCounterClockwise();
             }
     }
 }

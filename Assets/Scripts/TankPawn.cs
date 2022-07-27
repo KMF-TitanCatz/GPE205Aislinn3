@@ -2,41 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestTankPawn : TestPawn
+public class TankPawn : Pawn
 {
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
-
+        base.Start();
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
-
+        base.Start();
     }
 
     //Move forward function
     public override void MoveForward()
     {
-        Debug.Log("Move Forward");
+        mover.Move(transform.forward, moveSpeed);
     }
 
     //Move backward function
     public override void MoveBackward()
     {
-        Debug.Log("Move Backward");
+        mover.Move(transform.forward, -moveSpeed);
     }
 
     //Turn clockwise function
     public override void RotateClockwise()
     {
-        Debug.Log("Rotate Clockwise");
+        mover.Rotate(turnSpeed);
     }
 
     //Turn counter clockwise function
     public override void RotateCounterClockwise()
     {
-        Debug.Log("Rotate Counter Clockwise");
+        mover.Rotate(-turnSpeed);
     }
 }
