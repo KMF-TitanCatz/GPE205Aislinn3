@@ -460,7 +460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpawnTransform: {fileID: 1250560157}
   playerControllerPrefab: {fileID: 7678175574256992584, guid: eefb6d5566ec5994182f90394291bbe8, type: 3}
-  tankPawnPrefab: {fileID: 5261736377104479051, guid: 27558c4b20bad15409ee98c22286b4d6, type: 3}
+  tankPawnPrefab: {fileID: 7997706329027148818, guid: d40c206c39078eb49a1c475db1a5ad26, type: 3}
 --- !u!4 &1825345863
 Transform:
   m_ObjectHideFlags: 0
