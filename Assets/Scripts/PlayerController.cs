@@ -13,8 +13,32 @@ public class PlayerController : Controller
     // Start is called before the first frame update
     public override void Start()
     {
+        //if there is a gamemanager
+        if (GameManager.instance != null)
+        {
+            //and iof it tracks player(s)
+            if (GameManager.instance.players != null)
+            {
+                //register with the gamemanager
+                GameManager.instance.players.Add(this);
+            }
+        }
+
         //run start function from parent class
         base.Start();
+    }
+
+    public void OnDestroy()
+    {
+        //if there is a game manager
+        if (GameManager.instance != null)
+        {
+            //and if it tracks player(s)
+            if (GameManager.instance.players != null)
+            {
+                GameManager.instance.players.Remove(this);  
+            }
+        }
     }
 
     // Update is called once per frame
