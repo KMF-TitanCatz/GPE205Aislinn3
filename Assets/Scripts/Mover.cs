@@ -12,4 +12,7 @@ public abstract class Mover : MonoBehaviour
 
     //Rotate Function
     public abstract void Rotate(float turnSpeed);
+
+    //sprint function
+    public abstract void Sprint(Vector3 direction, float speed);
 }

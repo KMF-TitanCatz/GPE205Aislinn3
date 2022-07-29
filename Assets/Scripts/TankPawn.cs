@@ -39,4 +39,10 @@ public class TankPawn : Pawn
     {
         mover.Rotate(-turnSpeed);
     }
+
+    //Sprint functions
+    public override void MoveFaster()
+    {
+        mover.Sprint(transform.forward, sprintSpeed);
+    }
 }

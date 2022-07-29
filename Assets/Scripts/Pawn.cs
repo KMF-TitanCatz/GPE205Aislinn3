@@ -5,13 +5,15 @@ using UnityEngine;
 public abstract class Pawn : MonoBehaviour
 {
 
-    //var to hold TestMover
+    //var to hold Mover
     public Mover mover;
 
     //Move speed var
     public float moveSpeed;
     //turn speed var
     public float turnSpeed;
+    //Sprint speed 
+    public float sprintSpeed;
 
 
     // Start is called before the first frame update
@@ -29,5 +31,6 @@ public abstract class Pawn : MonoBehaviour
     public abstract void MoveBackward();
     public abstract void RotateClockwise();
     public abstract void RotateCounterClockwise();
+    public abstract void MoveFaster();
 
 }

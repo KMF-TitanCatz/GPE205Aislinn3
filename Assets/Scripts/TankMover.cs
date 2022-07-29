@@ -28,4 +28,11 @@ public class TankMover : Mover
         transform.Rotate(0, rotate, 0, Space.Self);
 
     }
+
+    //sprint
+    public override void Sprint(Vector3 direction, float speed)
+    {
+        Vector3 sprintVector = direction.normalized * speed * Time.deltaTime;
+        rb.MovePosition(rb.position + sprintVector);
+    }
 }

@@ -9,6 +9,7 @@ public class PlayerController : Controller
     public KeyCode moveBackwardsKey;
     public KeyCode rotateClockwiseKey;
     public KeyCode rotateCounterClockwiseKey;
+    public KeyCode sprintKey;
 
     // Start is called before the first frame update
     public override void Start()
@@ -72,5 +73,10 @@ public class PlayerController : Controller
             {
             pawn.RotateCounterClockwise();
             }
+
+        if (Input.GetKey(sprintKey))
+        {
+            pawn.MoveFaster();
+        }
     }
 }
