@@ -27,6 +27,7 @@ public abstract class Pawn : MonoBehaviour
     {
     }
 
+    //Functions for movement
     public abstract void MoveForward();
     public abstract void MoveBackward();
     public abstract void RotateClockwise();

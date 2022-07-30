@@ -18,6 +18,7 @@ public abstract class Controller : MonoBehaviour
     {       
     }
 
+    //Function for user controlls
     public virtual void ProcessInputs()
     {
     }

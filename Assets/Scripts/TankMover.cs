@@ -6,6 +6,7 @@ public class TankMover : Mover
 {
     //var for Rigidbody component
     private Rigidbody rb;
+    private Transform ts;
 
     // Start is called before the first frame update
     public override void Start()
@@ -25,7 +26,7 @@ public class TankMover : Mover
     public override void Rotate(float turnSpeed)
     {
         float rotate = turnSpeed * Time.deltaTime;
-        transform.Rotate(0, rotate, 0, Space.Self);
+        ts.Rotate(0, rotate, 0, Space.Self);
 
     }
 

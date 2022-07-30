@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-   
+   //var
     public static GameManager instance;
     public Transform playerSpawnTransform;
 
